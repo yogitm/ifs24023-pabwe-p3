@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="h-full bg-slate-50">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +9,9 @@
   <!-- Google Fonts: Inter & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
 
   <!-- Tabler Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
@@ -42,12 +45,14 @@
     html {
       scroll-behavior: smooth;
     }
+
     ::selection {
       background-color: #c7d2fe;
       color: #312e81;
     }
   </style>
 </head>
+
 <body class="min-h-full flex flex-col text-slate-800 antialiased font-sans bg-slate-50">
 
   <!-- ==================== HEADER UTAMA ==================== -->
@@ -56,7 +61,8 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo & Branding -->
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-indigo-400 flex items-center justify-center text-white shadow-md shadow-indigo-500/25">
+          <div
+            class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-indigo-400 flex items-center justify-center text-white shadow-md shadow-indigo-500/25">
             <i class="ti ti-layers-intersect text-xl"></i>
           </div>
           <div>
@@ -69,7 +75,8 @@
 
         <!-- Info Mahasiswa / NIM Badge -->
         <div class="flex items-center gap-2">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-700">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-700">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span class="font-mono font-semibold">ifs24023</span>
             <span class="hidden sm:inline text-slate-400">| PABWE 2026</span>
@@ -78,36 +85,22 @@
       </div>
 
       <!-- Navigasi Tab Utama -->
-      <nav class="flex items-center gap-1 sm:gap-2 -mb-px overflow-x-auto py-2 scrollbar-none" role="tablist" aria-label="Navigasi Fitur">
-        <button
-          type="button"
-          role="tab"
-          data-tab="expense"
-          aria-selected="true"
-          class="tab-btn flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 bg-indigo-600 text-white shadow-sm shadow-indigo-500/20 shrink-0"
-        >
+      <nav class="flex items-center gap-1 sm:gap-2 -mb-px overflow-x-auto py-2 scrollbar-none" role="tablist"
+        aria-label="Navigasi Fitur">
+        <button type="button" role="tab" data-tab="expense" aria-selected="true"
+          class="tab-btn flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 bg-indigo-600 text-white shadow-sm shadow-indigo-500/20 shrink-0">
           <i class="ti ti-wallet text-base"></i>
           <span>Expense Tracker</span>
         </button>
 
-        <button
-          type="button"
-          role="tab"
-          data-tab="bookmark"
-          aria-selected="false"
-          class="tab-btn flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100 shrink-0"
-        >
+        <button type="button" role="tab" data-tab="bookmark" aria-selected="false"
+          class="tab-btn flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100 shrink-0">
           <i class="ti ti-bookmarks text-base"></i>
           <span>Bookmark Manager</span>
         </button>
 
-        <button
-          type="button"
-          role="tab"
-          data-tab="quiz"
-          aria-selected="false"
-          class="tab-btn flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100 shrink-0"
-        >
+        <button type="button" role="tab" data-tab="quiz" aria-selected="false"
+          class="tab-btn flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100 shrink-0">
           <i class="ti ti-bulb text-base"></i>
           <span>Quiz Interaktif</span>
         </button>
@@ -122,7 +115,7 @@
     <!-- PANEL 1: EXPENSE TRACKER (CATATAN PENGELUARAN HARIAN)                      -->
     <!-- ========================================================================= -->
     <section id="panel-expense" class="space-y-6" role="tabpanel" aria-label="Panel Catatan Pengeluaran">
-      
+
       <!-- Kartu Ringkasan Finansial -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <!-- Saldo Bersih -->
@@ -164,7 +157,7 @@
 
       <!-- Layout 2 Kolom: Form Tambah Transaksi & Daftar Transaksi -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        
+
         <!-- Formulir Tambah Transaksi -->
         <div class="lg:col-span-5 bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-sm">
           <div class="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100">
@@ -180,13 +173,8 @@
               <label for="expense-title" class="block text-xs font-semibold text-slate-700 mb-1">
                 Deskripsi / Judul <span class="text-rose-500">*</span>
               </label>
-              <input
-                type="text"
-                id="expense-title"
-                placeholder="Contoh: Beli Makan Siang"
-                required
-                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400"
-              />
+              <input type="text" id="expense-title" placeholder="Contoh: Beli Makan Siang" required
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
             </div>
 
             <!-- Nominal & Tipe (Grid) -->
@@ -195,25 +183,16 @@
                 <label for="expense-amount" class="block text-xs font-semibold text-slate-700 mb-1">
                   Jumlah (Rp) <span class="text-rose-500">*</span>
                 </label>
-                <input
-                  type="number"
-                  id="expense-amount"
-                  min="1"
-                  step="1"
-                  placeholder="25000"
-                  required
-                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400"
-                />
+                <input type="number" id="expense-amount" min="1" step="1" placeholder="25000" required
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
               </div>
 
               <div>
                 <label for="expense-type" class="block text-xs font-semibold text-slate-700 mb-1">
                   Tipe Transaksi
                 </label>
-                <select
-                  id="expense-type"
-                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 bg-white"
-                >
+                <select id="expense-type"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 bg-white">
                   <option value="expense">Pengeluaran (-)</option>
                   <option value="income">Pemasukan (+)</option>
                 </select>
@@ -226,10 +205,8 @@
                 <label for="expense-category" class="block text-xs font-semibold text-slate-700 mb-1">
                   Kategori
                 </label>
-                <select
-                  id="expense-category"
-                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 bg-white"
-                >
+                <select id="expense-category"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 bg-white">
                   <option value="Makanan">Makanan & Minuman</option>
                   <option value="Transportasi">Transportasi</option>
                   <option value="Pendidikan">Pendidikan & Kuliah</option>
@@ -245,19 +222,13 @@
                 <label for="expense-date" class="block text-xs font-semibold text-slate-700 mb-1">
                   Tanggal
                 </label>
-                <input
-                  type="date"
-                  id="expense-date"
-                  required
-                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 bg-white"
-                />
+                <input type="date" id="expense-date" required
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 bg-white" />
               </div>
             </div>
 
-            <button
-              type="submit"
-              class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-sm shadow-indigo-500/25 transition-colors pt-2.5"
-            >
+            <button type="submit"
+              class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-sm shadow-indigo-500/25 transition-colors pt-2.5">
               <i class="ti ti-plus"></i>
               Simpan Transaksi
             </button>
@@ -266,35 +237,27 @@
 
         <!-- Daftar & Kontrol Filter Transaksi -->
         <div class="lg:col-span-7 space-y-4">
-          
+
           <!-- Bar Kontrol: Cari, Filter Tipe, Kategori, Sort -->
           <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-3">
             <!-- Input Cari -->
             <div class="relative">
               <i class="ti ti-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
-              <input
-                type="text"
-                id="expense-search"
-                placeholder="Cari transaksi berdasarkan judul / kategori..."
-                class="w-full pl-10 pr-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400"
-              />
+              <input type="text" id="expense-search" placeholder="Cari transaksi berdasarkan judul / kategori..."
+                class="w-full pl-10 pr-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
             </div>
 
             <!-- Filter Dropdowns -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <select
-                id="expense-filter-type"
-                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-              >
+              <select id="expense-filter-type"
+                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
                 <option value="all">Semua Tipe</option>
                 <option value="expense">Pengeluaran Saja</option>
                 <option value="income">Pemasukan Saja</option>
               </select>
 
-              <select
-                id="expense-filter-category"
-                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-              >
+              <select id="expense-filter-category"
+                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
                 <option value="all">Semua Kategori</option>
                 <option value="Makanan">Makanan</option>
                 <option value="Transportasi">Transportasi</option>
@@ -306,10 +269,8 @@
                 <option value="Lainnya">Lainnya</option>
               </select>
 
-              <select
-                id="expense-sort"
-                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-              >
+              <select id="expense-sort"
+                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
                 <option value="date-desc">Tanggal Terbaru</option>
                 <option value="date-asc">Tanggal Terlama</option>
                 <option value="amount-desc">Nominal Terbesar</option>
@@ -320,8 +281,10 @@
           </div>
 
           <!-- Empty State Transaksi -->
-          <div id="expense-empty" class="hidden rounded-2xl border-2 border-dashed border-slate-200 p-8 text-center bg-white">
-            <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+          <div id="expense-empty"
+            class="hidden rounded-2xl border-2 border-dashed border-slate-200 p-8 text-center bg-white">
+            <div
+              class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
               <i class="ti ti-receipt-off text-2xl"></i>
             </div>
             <h4 class="font-bold text-slate-800 text-sm mb-1">Belum Ada Transaksi</h4>
@@ -342,10 +305,10 @@
     <!-- PANEL 2: BOOKMARK / LINK MANAGER                                          -->
     <!-- ========================================================================= -->
     <section id="panel-bookmark" class="hidden space-y-6" role="tabpanel" aria-label="Panel Bookmark Manager">
-      
+
       <!-- Layout 2 Kolom: Form Tambah Bookmark & Grid Daftar Bookmark -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        
+
         <!-- Formulir Tambah Bookmark -->
         <div class="lg:col-span-4 bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-sm">
           <div class="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100">
@@ -361,13 +324,8 @@
               <label for="bookmark-title" class="block text-xs font-semibold text-slate-700 mb-1">
                 Nama / Judul Bookmark <span class="text-rose-500">*</span>
               </label>
-              <input
-                type="text"
-                id="bookmark-title"
-                placeholder="Contoh: GitHub Profil"
-                required
-                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400"
-              />
+              <input type="text" id="bookmark-title" placeholder="Contoh: GitHub Profil" required
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
             </div>
 
             <!-- URL Tautan -->
@@ -376,13 +334,8 @@
                 Alamat URL <span class="text-rose-500">*</span>
               </label>
               <div class="relative">
-                <input
-                  type="url"
-                  id="bookmark-url"
-                  placeholder="https://github.com"
-                  required
-                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400"
-                />
+                <input type="url" id="bookmark-url" placeholder="https://github.com" required
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
               </div>
               <p class="text-[11px] text-slate-400 mt-1">Harus diawali dengan http:// atau https://</p>
             </div>
@@ -392,10 +345,8 @@
               <label for="bookmark-category" class="block text-xs font-semibold text-slate-700 mb-1">
                 Kategori / Tag
               </label>
-              <select
-                id="bookmark-category"
-                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 bg-white"
-              >
+              <select id="bookmark-category"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 bg-white">
                 <option value="Dokumentasi">Dokumentasi & API</option>
                 <option value="Belajar">Belajar & Kuliah</option>
                 <option value="Tools">Tools & Utilitas</option>
@@ -411,18 +362,12 @@
               <label for="bookmark-note" class="block text-xs font-semibold text-slate-700 mb-1">
                 Catatan Singkat <span class="text-slate-400 font-normal">(opsional)</span>
               </label>
-              <textarea
-                id="bookmark-note"
-                rows="2"
-                placeholder="Deskripsi singkat tautan ini..."
-                class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400 resize-none"
-              ></textarea>
+              <textarea id="bookmark-note" rows="2" placeholder="Deskripsi singkat tautan ini..."
+                class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400 resize-none"></textarea>
             </div>
 
-            <button
-              type="submit"
-              class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-sm shadow-indigo-500/25 transition-colors pt-2.5"
-            >
+            <button type="submit"
+              class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-sm shadow-indigo-500/25 transition-colors pt-2.5">
               <i class="ti ti-device-floppy"></i>
               Simpan Bookmark
             </button>
@@ -431,24 +376,18 @@
 
         <!-- Daftar Bookmark (Card Grid) -->
         <div class="lg:col-span-8 space-y-4">
-          
+
           <!-- Bar Kontrol Pencarian, Filter Kategori & Sort -->
           <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col sm:flex-row gap-2.5">
             <div class="relative flex-1">
               <i class="ti ti-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
-              <input
-                type="text"
-                id="bookmark-search"
-                placeholder="Cari tautan, nama, atau catatan..."
-                class="w-full pl-10 pr-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400"
-              />
+              <input type="text" id="bookmark-search" placeholder="Cari tautan, nama, atau catatan..."
+                class="w-full pl-10 pr-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
             </div>
 
             <div class="flex items-center gap-2 shrink-0">
-              <select
-                id="bookmark-filter-category"
-                class="px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-              >
+              <select id="bookmark-filter-category"
+                class="px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
                 <option value="all">Semua Kategori</option>
                 <option value="Dokumentasi">Dokumentasi</option>
                 <option value="Belajar">Belajar</option>
@@ -459,10 +398,8 @@
                 <option value="Lainnya">Lainnya</option>
               </select>
 
-              <select
-                id="bookmark-sort"
-                class="px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-              >
+              <select id="bookmark-sort"
+                class="px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
                 <option value="newest">Terbaru Ditambahkan</option>
                 <option value="title-asc">Judul (A-Z)</option>
                 <option value="title-desc">Judul (Z-A)</option>
@@ -472,8 +409,10 @@
           </div>
 
           <!-- Empty State Bookmark -->
-          <div id="bookmark-empty" class="hidden rounded-2xl border-2 border-dashed border-slate-200 p-8 text-center bg-white">
-            <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+          <div id="bookmark-empty"
+            class="hidden rounded-2xl border-2 border-dashed border-slate-200 p-8 text-center bg-white">
+            <div
+              class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
               <i class="ti ti-bookmark-off text-2xl"></i>
             </div>
             <h4 class="font-bold text-slate-800 text-sm mb-1">Belum Ada Bookmark</h4>
@@ -493,11 +432,14 @@
     <!-- ========================================================================= -->
     <!-- PANEL 3: KUIS INTERAKTIF (QUIZ APP)                                       -->
     <!-- ========================================================================= -->
-    <section id="panel-quiz" class="hidden max-w-2xl mx-auto space-y-6" role="tabpanel" aria-label="Panel Kuis Interaktif">
-      
+    <section id="panel-quiz" class="hidden max-w-2xl mx-auto space-y-6" role="tabpanel"
+      aria-label="Panel Kuis Interaktif">
+
       <!-- CARD 1: HALAMAN AWAL (START SCREEN) -->
-      <div id="quiz-card-start" class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
-        <div class="w-16 h-16 rounded-3xl bg-indigo-50 text-indigo-600 flex items-center justify-center mx-auto mb-4 shadow-sm">
+      <div id="quiz-card-start"
+        class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
+        <div
+          class="w-16 h-16 rounded-3xl bg-indigo-50 text-indigo-600 flex items-center justify-center mx-auto mb-4 shadow-sm">
           <i class="ti ti-school text-3xl"></i>
         </div>
 
@@ -505,7 +447,8 @@
           Kuis Pemrograman Web & JavaScript
         </h3>
         <p class="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-md mx-auto mb-6">
-          Uji pemahaman Anda seputar DOM, event handling, localStorage, array methods, dan konsep web modern melalui kuis interaktif ini.
+          Uji pemahaman Anda seputar DOM, event handling, localStorage, array methods, dan konsep web modern melalui
+          kuis interaktif ini.
         </p>
 
         <!-- Info Card & High Score -->
@@ -523,11 +466,8 @@
         </div>
 
         <!-- Tombol Mulai -->
-        <button
-          type="button"
-          id="quiz-btn-start"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
-        >
+        <button type="button" id="quiz-btn-start"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]">
           <i class="ti ti-player-play"></i>
           Mulai Kuis Sekarang
         </button>
@@ -535,14 +475,15 @@
 
       <!-- CARD 2: PERTANYAAN AKTIF (ACTIVE QUESTION SCREEN) -->
       <div id="quiz-card-active" class="hidden bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
-        
+
         <!-- Header Kuis: Indikator Soal & Timer -->
         <div class="flex items-center justify-between gap-3 mb-4">
           <span id="quiz-progress-text" class="text-xs font-bold uppercase tracking-wider text-indigo-600 font-mono">
             Pertanyaan 1 dari 8
           </span>
           <div class="flex items-center gap-2">
-            <span id="quiz-timer-display" class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 font-mono">
+            <span id="quiz-timer-display"
+              class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 font-mono">
               25s
             </span>
           </div>
@@ -554,7 +495,8 @@
         </div>
 
         <!-- Teks Pertanyaan -->
-        <h4 id="quiz-question-text" class="font-display font-bold text-slate-900 text-base sm:text-lg leading-relaxed mb-6">
+        <h4 id="quiz-question-text"
+          class="font-display font-bold text-slate-900 text-base sm:text-lg leading-relaxed mb-6">
           Pertanyaan akan tampil di sini...
         </h4>
 
@@ -570,11 +512,8 @@
 
         <!-- Tombol Lanjut Soal -->
         <div class="mt-6 flex justify-end">
-          <button
-            type="button"
-            id="quiz-btn-next"
-            class="hidden inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-sm shadow-indigo-500/25 transition-all"
-          >
+          <button type="button" id="quiz-btn-next"
+            class="hidden inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-sm shadow-indigo-500/25 transition-all">
             <span>Soal Berikutnya</span>
             <i class="ti ti-arrow-right"></i>
           </button>
@@ -582,8 +521,10 @@
       </div>
 
       <!-- CARD 3: HASIL AKHIR KUIS (RESULT SCREEN) -->
-      <div id="quiz-card-result" class="hidden bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
-        <div class="w-16 h-16 rounded-3xl bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-sm">
+      <div id="quiz-card-result"
+        class="hidden bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
+        <div
+          class="w-16 h-16 rounded-3xl bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-sm">
           <i class="ti ti-award text-3xl"></i>
         </div>
 
@@ -594,7 +535,8 @@
 
         <!-- Badge Hasil Evaluasi -->
         <div class="mb-4">
-          <span id="quiz-final-badge" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+          <span id="quiz-final-badge"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
             Sempurna!
           </span>
         </div>
@@ -613,7 +555,8 @@
         <!-- Rekor Skor Tertinggi Info -->
         <div class="text-xs text-slate-500 mb-6 flex items-center justify-center gap-1.5">
           <i class="ti ti-trophy text-amber-500"></i>
-          <span>Skor Tertinggi Anda: <strong id="quiz-result-high-score" class="text-slate-800 font-semibold">—</strong></span>
+          <span>Skor Tertinggi Anda: <strong id="quiz-result-high-score"
+              class="text-slate-800 font-semibold">—</strong></span>
         </div>
 
         <!-- Review Jawaban Accordion / List -->
@@ -628,11 +571,8 @@
         </div>
 
         <!-- Tombol Ulangi Kuis -->
-        <button
-          type="button"
-          id="quiz-btn-restart"
-          class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-500/25 transition-all duration-200"
-        >
+        <button type="button" id="quiz-btn-restart"
+          class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-500/25 transition-all duration-200">
           <i class="ti ti-refresh"></i>
           Ulangi Kuis
         </button>
@@ -644,14 +584,15 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="mt-auto border-t border-slate-200 bg-white py-6">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+    <div
+      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
       <div class="flex items-center gap-2">
         <span class="font-bold text-slate-700">PABWE 2026</span>
         <span>•</span>
         <span>Praktikum 3 (JavaScript & DOM)</span>
       </div>
       <div>
-        Dibuat oleh <strong class="text-slate-700 font-semibold">ifs24023</strong> — Institut Teknologi Del
+        Dibuat oleh <strong class="text-slate-700 font-semibold">yogitrim</strong> — Institut Teknologi Del
       </div>
     </div>
   </footer>
@@ -659,26 +600,20 @@
   <!-- ========================================================================= -->
   <!-- MODAL 1: UBAH TRANSAKSI EXPENSE                                           -->
   <!-- ========================================================================= -->
-  <div
-    id="modal-expense-edit"
-    class="custom-modal fixed inset-0 z-50 hidden items-center justify-center p-4"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-expense-edit-title"
-  >
+  <div id="modal-expense-edit" class="custom-modal fixed inset-0 z-50 hidden items-center justify-center p-4"
+    role="dialog" aria-modal="true" aria-labelledby="modal-expense-edit-title">
     <div class="modal-backdrop absolute inset-0 bg-slate-900/50 backdrop-blur-sm"></div>
-    <div class="relative w-full max-w-md bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-7 z-10 animate-in fade-in zoom-in-95 duration-200">
+    <div
+      class="relative w-full max-w-md bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-7 z-10 animate-in fade-in zoom-in-95 duration-200">
       <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-        <h3 id="modal-expense-edit-title" class="font-display font-bold text-slate-900 text-base flex items-center gap-2">
+        <h3 id="modal-expense-edit-title"
+          class="font-display font-bold text-slate-900 text-base flex items-center gap-2">
           <i class="ti ti-pencil text-indigo-600"></i>
           Ubah Transaksi
         </h3>
-        <button
-          type="button"
-          data-close-modal="#modal-expense-edit"
+        <button type="button" data-close-modal="#modal-expense-edit"
           class="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
-          aria-label="Tutup Modal"
-        >
+          aria-label="Tutup Modal">
           <i class="ti ti-x text-lg"></i>
         </button>
       </div>
@@ -688,12 +623,8 @@
           <label for="expense-edit-title" class="block text-xs font-semibold text-slate-700 mb-1">
             Judul / Deskripsi <span class="text-rose-500">*</span>
           </label>
-          <input
-            type="text"
-            id="expense-edit-title"
-            required
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600"
-          />
+          <input type="text" id="expense-edit-title" required
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600" />
         </div>
 
         <div class="grid grid-cols-2 gap-3">
@@ -701,23 +632,16 @@
             <label for="expense-edit-amount" class="block text-xs font-semibold text-slate-700 mb-1">
               Jumlah (Rp) <span class="text-rose-500">*</span>
             </label>
-            <input
-              type="number"
-              id="expense-edit-amount"
-              min="1"
-              required
-              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600"
-            />
+            <input type="number" id="expense-edit-amount" min="1" required
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600" />
           </div>
 
           <div>
             <label for="expense-edit-type" class="block text-xs font-semibold text-slate-700 mb-1">
               Tipe
             </label>
-            <select
-              id="expense-edit-type"
-              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-            >
+            <select id="expense-edit-type"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
               <option value="expense">Pengeluaran (-)</option>
               <option value="income">Pemasukan (+)</option>
             </select>
@@ -729,10 +653,8 @@
             <label for="expense-edit-category" class="block text-xs font-semibold text-slate-700 mb-1">
               Kategori
             </label>
-            <select
-              id="expense-edit-category"
-              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-            >
+            <select id="expense-edit-category"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
               <option value="Makanan">Makanan</option>
               <option value="Transportasi">Transportasi</option>
               <option value="Pendidikan">Pendidikan</option>
@@ -748,27 +670,18 @@
             <label for="expense-edit-date" class="block text-xs font-semibold text-slate-700 mb-1">
               Tanggal
             </label>
-            <input
-              type="date"
-              id="expense-edit-date"
-              required
-              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-            />
+            <input type="date" id="expense-edit-date" required
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white" />
           </div>
         </div>
 
         <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
-          <button
-            type="button"
-            data-close-modal="#modal-expense-edit"
-            class="px-4 py-2 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
-          >
+          <button type="button" data-close-modal="#modal-expense-edit"
+            class="px-4 py-2 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
             Batal
           </button>
-          <button
-            type="submit"
-            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition-colors"
-          >
+          <button type="submit"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition-colors">
             <i class="ti ti-device-floppy"></i>
             Simpan Perubahan
           </button>
@@ -780,15 +693,11 @@
   <!-- ========================================================================= -->
   <!-- MODAL 2: KONFIRMASI HAPUS TRANSAKSI EXPENSE                               -->
   <!-- ========================================================================= -->
-  <div
-    id="modal-expense-delete"
-    class="custom-modal fixed inset-0 z-50 hidden items-center justify-center p-4"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-expense-delete-title"
-  >
+  <div id="modal-expense-delete" class="custom-modal fixed inset-0 z-50 hidden items-center justify-center p-4"
+    role="dialog" aria-modal="true" aria-labelledby="modal-expense-delete-title">
     <div class="modal-backdrop absolute inset-0 bg-slate-900/50 backdrop-blur-sm"></div>
-    <div class="relative w-full max-w-sm bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 z-10 animate-in fade-in zoom-in-95 duration-200">
+    <div
+      class="relative w-full max-w-sm bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 z-10 animate-in fade-in zoom-in-95 duration-200">
       <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mx-auto mb-3">
         <i class="ti ti-trash text-2xl"></i>
       </div>
@@ -796,22 +705,17 @@
         Hapus Transaksi?
       </h3>
       <p class="text-xs text-slate-500 text-center mb-5 leading-relaxed">
-        Apakah Anda yakin ingin menghapus transaksi <strong id="expense-delete-title" class="text-slate-800"></strong>? Data yang dihapus tidak dapat dipulihkan.
+        Apakah Anda yakin ingin menghapus transaksi <strong id="expense-delete-title" class="text-slate-800"></strong>?
+        Data yang dihapus tidak dapat dipulihkan.
       </p>
 
       <div class="flex items-center justify-center gap-2">
-        <button
-          type="button"
-          data-close-modal="#modal-expense-delete"
-          class="flex-1 px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
-        >
+        <button type="button" data-close-modal="#modal-expense-delete"
+          class="flex-1 px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
           Batal
         </button>
-        <button
-          type="button"
-          id="expense-delete-confirm"
-          class="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold shadow-sm transition-colors"
-        >
+        <button type="button" id="expense-delete-confirm"
+          class="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold shadow-sm transition-colors">
           <i class="ti ti-trash"></i>
           Ya, Hapus
         </button>
@@ -822,26 +726,20 @@
   <!-- ========================================================================= -->
   <!-- MODAL 3: UBAH BOOKMARK                                                    -->
   <!-- ========================================================================= -->
-  <div
-    id="modal-bookmark-edit"
-    class="custom-modal fixed inset-0 z-50 hidden items-center justify-center p-4"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-bookmark-edit-title"
-  >
+  <div id="modal-bookmark-edit" class="custom-modal fixed inset-0 z-50 hidden items-center justify-center p-4"
+    role="dialog" aria-modal="true" aria-labelledby="modal-bookmark-edit-title">
     <div class="modal-backdrop absolute inset-0 bg-slate-900/50 backdrop-blur-sm"></div>
-    <div class="relative w-full max-w-md bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-7 z-10 animate-in fade-in zoom-in-95 duration-200">
+    <div
+      class="relative w-full max-w-md bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-7 z-10 animate-in fade-in zoom-in-95 duration-200">
       <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-        <h3 id="modal-bookmark-edit-title" class="font-display font-bold text-slate-900 text-base flex items-center gap-2">
+        <h3 id="modal-bookmark-edit-title"
+          class="font-display font-bold text-slate-900 text-base flex items-center gap-2">
           <i class="ti ti-pencil text-indigo-600"></i>
           Ubah Bookmark
         </h3>
-        <button
-          type="button"
-          data-close-modal="#modal-bookmark-edit"
+        <button type="button" data-close-modal="#modal-bookmark-edit"
           class="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
-          aria-label="Tutup Modal"
-        >
+          aria-label="Tutup Modal">
           <i class="ti ti-x text-lg"></i>
         </button>
       </div>
@@ -851,34 +749,24 @@
           <label for="bookmark-edit-title" class="block text-xs font-semibold text-slate-700 mb-1">
             Nama / Judul <span class="text-rose-500">*</span>
           </label>
-          <input
-            type="text"
-            id="bookmark-edit-title"
-            required
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600"
-          />
+          <input type="text" id="bookmark-edit-title" required
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600" />
         </div>
 
         <div>
           <label for="bookmark-edit-url" class="block text-xs font-semibold text-slate-700 mb-1">
             Alamat URL <span class="text-rose-500">*</span>
           </label>
-          <input
-            type="url"
-            id="bookmark-edit-url"
-            required
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600"
-          />
+          <input type="url" id="bookmark-edit-url" required
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600" />
         </div>
 
         <div>
           <label for="bookmark-edit-category" class="block text-xs font-semibold text-slate-700 mb-1">
             Kategori
           </label>
-          <select
-            id="bookmark-edit-category"
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white"
-          >
+          <select id="bookmark-edit-category"
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
             <option value="Dokumentasi">Dokumentasi</option>
             <option value="Belajar">Belajar</option>
             <option value="Tools">Tools</option>
@@ -893,25 +781,17 @@
           <label for="bookmark-edit-note" class="block text-xs font-semibold text-slate-700 mb-1">
             Catatan Singkat
           </label>
-          <textarea
-            id="bookmark-edit-note"
-            rows="2"
-            class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 resize-none"
-          ></textarea>
+          <textarea id="bookmark-edit-note" rows="2"
+            class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 resize-none"></textarea>
         </div>
 
         <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
-          <button
-            type="button"
-            data-close-modal="#modal-bookmark-edit"
-            class="px-4 py-2 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
-          >
+          <button type="button" data-close-modal="#modal-bookmark-edit"
+            class="px-4 py-2 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
             Batal
           </button>
-          <button
-            type="submit"
-            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition-colors"
-          >
+          <button type="submit"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition-colors">
             <i class="ti ti-device-floppy"></i>
             Simpan Perubahan
           </button>
@@ -923,15 +803,11 @@
   <!-- ========================================================================= -->
   <!-- MODAL 4: KONFIRMASI HAPUS BOOKMARK                                        -->
   <!-- ========================================================================= -->
-  <div
-    id="modal-bookmark-delete"
-    class="custom-modal fixed inset-0 z-50 hidden items-center justify-center p-4"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-bookmark-delete-title"
-  >
+  <div id="modal-bookmark-delete" class="custom-modal fixed inset-0 z-50 hidden items-center justify-center p-4"
+    role="dialog" aria-modal="true" aria-labelledby="modal-bookmark-delete-title">
     <div class="modal-backdrop absolute inset-0 bg-slate-900/50 backdrop-blur-sm"></div>
-    <div class="relative w-full max-w-sm bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 z-10 animate-in fade-in zoom-in-95 duration-200">
+    <div
+      class="relative w-full max-w-sm bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 z-10 animate-in fade-in zoom-in-95 duration-200">
       <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mx-auto mb-3">
         <i class="ti ti-trash text-2xl"></i>
       </div>
@@ -939,22 +815,17 @@
         Hapus Bookmark?
       </h3>
       <p class="text-xs text-slate-500 text-center mb-5 leading-relaxed">
-        Apakah Anda yakin ingin menghapus bookmark <strong id="bookmark-delete-title" class="text-slate-800"></strong>? Tindakan ini tidak dapat dibatalkan.
+        Apakah Anda yakin ingin menghapus bookmark <strong id="bookmark-delete-title" class="text-slate-800"></strong>?
+        Tindakan ini tidak dapat dibatalkan.
       </p>
 
       <div class="flex items-center justify-center gap-2">
-        <button
-          type="button"
-          data-close-modal="#modal-bookmark-delete"
-          class="flex-1 px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
-        >
+        <button type="button" data-close-modal="#modal-bookmark-delete"
+          class="flex-1 px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
           Batal
         </button>
-        <button
-          type="button"
-          id="bookmark-delete-confirm"
-          class="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold shadow-sm transition-colors"
-        >
+        <button type="button" id="bookmark-delete-confirm"
+          class="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold shadow-sm transition-colors">
           <i class="ti ti-trash"></i>
           Ya, Hapus
         </button>
@@ -968,4 +839,5 @@
   <!-- SCRIPT UTAMA VANILLA JAVASCRIPT -->
   <script src="assets/script.js"></script>
 </body>
+
 </html>
