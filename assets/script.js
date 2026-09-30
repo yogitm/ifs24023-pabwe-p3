@@ -197,7 +197,7 @@ const panels = {
  * Berpindah tab aktif, mengupdate style UI dan menyimpan ke localStorage
  * @param {string} tabName ('expense' | 'bookmark' | 'quiz')
  */
-function switchTab(tabName) {
+function switchTab(tabName, updateUrl = true) {
   if (!panels[tabName]) {
     tabName = "expense";
   }
@@ -225,6 +225,14 @@ function switchTab(tabName) {
 
   // Simpan state tab ke localStorage
   localStorage.setItem(TAB_STORAGE_KEY, tabName);
+
+  // Update URL pathname untuk SPA routing
+  if (updateUrl && window.history && window.history.pushState) {
+    const targetPath = tabName === "expense" ? "/" : "/" + tabName;
+    if (window.location.pathname !== targetPath) {
+      window.history.pushState({ tab: tabName }, "", targetPath);
+    }
+  }
 }
 
 // Pasang event listener pada setiap tombol tab
@@ -1600,7 +1608,28 @@ document.addEventListener("DOMContentLoaded", () => {
   renderBookmarks();
   renderQuizHighScoreBadge();
 
-  // Buka tab terakhir yang disimpan di localStorage (default: 'expense')
-  const savedTab = localStorage.getItem(TAB_STORAGE_KEY) || "expense";
-  switchTab(savedTab);
+  // Buka tab berdasarkan pathname URL, hash, atau localStorage
+  const path = window.location.pathname.toLowerCase().replace(/^\/|\/$/g, '');
+  const hash = window.location.hash.toLowerCase().replace(/^#/, '');
+  let activeTab = "expense";
+
+  if (path === "quiz" || path === "kuis" || hash === "quiz") {
+    activeTab = "quiz";
+  } else if (path === "bookmark" || path === "bookmarks" || hash === "bookmark" || hash === "bookmarks") {
+    activeTab = "bookmark";
+  } else if (path === "expense" || path === "expenses" || hash === "expense") {
+    activeTab = "expense";
+  } else {
+    activeTab = localStorage.getItem(TAB_STORAGE_KEY) || "expense";
+  }
+
+  switchTab(activeTab, false);
+
+  window.addEventListener("popstate", () => {
+    const currentPath = window.location.pathname.toLowerCase().replace(/^\/|\/$/g, '');
+    let t = "expense";
+    if (currentPath === "quiz" || currentPath === "kuis") t = "quiz";
+    else if (currentPath === "bookmark" || currentPath === "bookmarks") t = "bookmark";
+    switchTab(t, false);
+  });
 });
