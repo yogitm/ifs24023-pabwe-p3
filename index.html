@@ -67,7 +67,7 @@
           </div>
           <div>
             <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">
-              NexusHub <span class="text-xs font-normal text-slate-400 font-sans">P3</span>
+              NexusHub <span class="text-xs font-normal text-slate-600 font-sans">P3</span>
             </h1>
             <p class="text-xs text-slate-500">Praktikum JavaScript & DOM</p>
           </div>
@@ -79,7 +79,7 @@
             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-700">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span class="font-mono font-semibold">ifs24023</span>
-            <span class="hidden sm:inline text-slate-400">| PABWE 2026</span>
+            <span class="hidden sm:inline text-slate-600">| PABWE 2026</span>
           </div>
         </div>
       </div>
@@ -115,43 +115,44 @@
     <!-- PANEL 1: EXPENSE TRACKER (CATATAN PENGELUARAN HARIAN)                      -->
     <!-- ========================================================================= -->
     <section id="panel-expense" class="space-y-6" role="tabpanel" aria-label="Panel Catatan Pengeluaran">
+      <h2 class="sr-only">Expense Tracker - Manajemen Pengeluaran</h2>
 
       <!-- Kartu Ringkasan Finansial -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <!-- Saldo Bersih -->
         <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm relative overflow-hidden">
           <div class="flex items-center justify-between mb-3">
-            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Saldo Saat Ini</span>
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-700">Saldo Saat Ini</span>
             <div class="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
               <i class="ti ti-scale text-lg"></i>
             </div>
           </div>
           <p id="summary-balance" class="text-2xl font-display font-extrabold text-slate-900">Rp 0</p>
-          <p class="text-xs text-slate-400 mt-1">Pemasukan dikurangi pengeluaran</p>
+          <p class="text-xs text-slate-600 mt-1">Pemasukan dikurangi pengeluaran</p>
         </div>
 
         <!-- Total Pemasukan -->
         <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm relative overflow-hidden">
           <div class="flex items-center justify-between mb-3">
-            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-600">Total Pemasukan</span>
-            <div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Total Pemasukan</span>
+            <div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
               <i class="ti ti-arrow-down-left text-lg"></i>
             </div>
           </div>
-          <p id="summary-total-income" class="text-2xl font-display font-extrabold text-emerald-600">Rp 0</p>
-          <p class="text-xs text-slate-400 mt-1">Akumulasi seluruh pemasukan</p>
+          <p id="summary-total-income" class="text-2xl font-display font-extrabold text-emerald-700">Rp 0</p>
+          <p class="text-xs text-slate-600 mt-1">Akumulasi seluruh pemasukan</p>
         </div>
 
         <!-- Total Pengeluaran -->
         <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm relative overflow-hidden">
           <div class="flex items-center justify-between mb-3">
-            <span class="text-xs font-semibold uppercase tracking-wider text-rose-600">Total Pengeluaran</span>
-            <div class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
+            <span class="text-xs font-semibold uppercase tracking-wider text-rose-800">Total Pengeluaran</span>
+            <div class="w-8 h-8 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center">
               <i class="ti ti-arrow-up-right text-lg"></i>
             </div>
           </div>
-          <p id="summary-total-expense" class="text-2xl font-display font-extrabold text-rose-600">Rp 0</p>
-          <p class="text-xs text-slate-400 mt-1">Akumulasi pengeluaran tercatat</p>
+          <p id="summary-total-expense" class="text-2xl font-display font-extrabold text-rose-700">Rp 0</p>
+          <p class="text-xs text-slate-600 mt-1">Akumulasi pengeluaran tercatat</p>
         </div>
       </div>
 
@@ -174,7 +175,7 @@
                 Deskripsi / Judul <span class="text-rose-500">*</span>
               </label>
               <input type="text" id="expense-title" placeholder="Contoh: Beli Makan Siang" required
-                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-500" />
             </div>
 
             <!-- Nominal & Tipe (Grid) -->
@@ -184,7 +185,7 @@
                   Jumlah (Rp) <span class="text-rose-500">*</span>
                 </label>
                 <input type="number" id="expense-amount" min="1" step="1" placeholder="25000" required
-                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-500" />
               </div>
 
               <div>
@@ -237,46 +238,57 @@
 
         <!-- Daftar & Kontrol Filter Transaksi -->
         <div class="lg:col-span-7 space-y-4">
+          <h3 class="sr-only">Riwayat dan Pencarian Transaksi</h3>
 
           <!-- Bar Kontrol: Cari, Filter Tipe, Kategori, Sort -->
           <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-3">
             <!-- Input Cari -->
             <div class="relative">
-              <i class="ti ti-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
-              <input type="text" id="expense-search" placeholder="Cari transaksi berdasarkan judul / kategori..."
-                class="w-full pl-10 pr-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
+              <label for="expense-search" class="sr-only">Cari transaksi</label>
+              <i class="ti ti-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-base"></i>
+              <input type="text" id="expense-search" placeholder="Cari transaksi berdasarkan judul / kategori..." aria-label="Cari transaksi berdasarkan judul atau kategori"
+                class="w-full pl-10 pr-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-500" />
             </div>
 
             <!-- Filter Dropdowns -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <select id="expense-filter-type"
-                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
-                <option value="all">Semua Tipe</option>
-                <option value="expense">Pengeluaran Saja</option>
-                <option value="income">Pemasukan Saja</option>
-              </select>
+              <div>
+                <label for="expense-filter-type" class="sr-only">Filter Tipe Transaksi</label>
+                <select id="expense-filter-type" aria-label="Filter Tipe Transaksi"
+                  class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
+                  <option value="all">Semua Tipe</option>
+                  <option value="expense">Pengeluaran Saja</option>
+                  <option value="income">Pemasukan Saja</option>
+                </select>
+              </div>
 
-              <select id="expense-filter-category"
-                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
-                <option value="all">Semua Kategori</option>
-                <option value="Makanan">Makanan</option>
-                <option value="Transportasi">Transportasi</option>
-                <option value="Pendidikan">Pendidikan</option>
-                <option value="Belanja">Belanja</option>
-                <option value="Hiburan">Hiburan</option>
-                <option value="Tagihan">Tagihan</option>
-                <option value="Pemasukan">Gaji / Saku</option>
-                <option value="Lainnya">Lainnya</option>
-              </select>
+              <div>
+                <label for="expense-filter-category" class="sr-only">Filter Kategori Transaksi</label>
+                <select id="expense-filter-category" aria-label="Filter Kategori Transaksi"
+                  class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
+                  <option value="all">Semua Kategori</option>
+                  <option value="Makanan">Makanan</option>
+                  <option value="Transportasi">Transportasi</option>
+                  <option value="Pendidikan">Pendidikan</option>
+                  <option value="Belanja">Belanja</option>
+                  <option value="Hiburan">Hiburan</option>
+                  <option value="Tagihan">Tagihan</option>
+                  <option value="Pemasukan">Gaji / Saku</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+              </div>
 
-              <select id="expense-sort"
-                class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
-                <option value="date-desc">Tanggal Terbaru</option>
-                <option value="date-asc">Tanggal Terlama</option>
-                <option value="amount-desc">Nominal Terbesar</option>
-                <option value="amount-asc">Nominal Terkecil</option>
-                <option value="title-asc">Judul (A-Z)</option>
-              </select>
+              <div>
+                <label for="expense-sort" class="sr-only">Urutkan Riwayat Transaksi</label>
+                <select id="expense-sort" aria-label="Urutkan Riwayat Transaksi"
+                  class="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
+                  <option value="date-desc">Tanggal Terbaru</option>
+                  <option value="date-asc">Tanggal Terlama</option>
+                  <option value="amount-desc">Nominal Terbesar</option>
+                  <option value="amount-asc">Nominal Terkecil</option>
+                  <option value="title-asc">Judul (A-Z)</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -284,7 +296,7 @@
           <div id="expense-empty"
             class="hidden rounded-2xl border-2 border-dashed border-slate-200 p-8 text-center bg-white">
             <div
-              class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+              class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-500 flex items-center justify-center mx-auto mb-3">
               <i class="ti ti-receipt-off text-2xl"></i>
             </div>
             <h4 class="font-bold text-slate-800 text-sm mb-1">Belum Ada Transaksi</h4>
@@ -305,6 +317,7 @@
     <!-- PANEL 2: BOOKMARK / LINK MANAGER                                          -->
     <!-- ========================================================================= -->
     <section id="panel-bookmark" class="hidden space-y-6" role="tabpanel" aria-label="Panel Bookmark Manager">
+      <h2 class="sr-only">Bookmark Manager - Manajemen Koleksi Tautan</h2>
 
       <!-- Layout 2 Kolom: Form Tambah Bookmark & Grid Daftar Bookmark -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -325,7 +338,7 @@
                 Nama / Judul Bookmark <span class="text-rose-500">*</span>
               </label>
               <input type="text" id="bookmark-title" placeholder="Contoh: GitHub Profil" required
-                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-500" />
             </div>
 
             <!-- URL Tautan -->
@@ -335,9 +348,9 @@
               </label>
               <div class="relative">
                 <input type="url" id="bookmark-url" placeholder="https://github.com" required
-                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-500" />
               </div>
-              <p class="text-[11px] text-slate-400 mt-1">Harus diawali dengan http:// atau https://</p>
+              <p class="text-[11px] text-slate-600 mt-1">Harus diawali dengan http:// atau https://</p>
             </div>
 
             <!-- Kategori / Tag -->
@@ -360,10 +373,10 @@
             <!-- Catatan Singkat (Opsional) -->
             <div>
               <label for="bookmark-note" class="block text-xs font-semibold text-slate-700 mb-1">
-                Catatan Singkat <span class="text-slate-400 font-normal">(opsional)</span>
+                Catatan Singkat <span class="text-slate-600 font-normal">(opsional)</span>
               </label>
               <textarea id="bookmark-note" rows="2" placeholder="Deskripsi singkat tautan ini..."
-                class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400 resize-none"></textarea>
+                class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-500 resize-none"></textarea>
             </div>
 
             <button type="submit"
@@ -376,35 +389,43 @@
 
         <!-- Daftar Bookmark (Card Grid) -->
         <div class="lg:col-span-8 space-y-4">
+          <h3 class="sr-only">Daftar Koleksi Bookmark</h3>
 
           <!-- Bar Kontrol Pencarian, Filter Kategori & Sort -->
           <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex flex-col sm:flex-row gap-2.5">
             <div class="relative flex-1">
-              <i class="ti ti-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
-              <input type="text" id="bookmark-search" placeholder="Cari tautan, nama, atau catatan..."
-                class="w-full pl-10 pr-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-400" />
+              <label for="bookmark-search" class="sr-only">Cari bookmark</label>
+              <i class="ti ti-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-base"></i>
+              <input type="text" id="bookmark-search" placeholder="Cari tautan, nama, atau catatan..." aria-label="Cari tautan, nama, atau catatan"
+                class="w-full pl-10 pr-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 placeholder:text-slate-500" />
             </div>
 
             <div class="flex items-center gap-2 shrink-0">
-              <select id="bookmark-filter-category"
-                class="px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
-                <option value="all">Semua Kategori</option>
-                <option value="Dokumentasi">Dokumentasi</option>
-                <option value="Belajar">Belajar</option>
-                <option value="Tools">Tools</option>
-                <option value="Desain">Desain</option>
-                <option value="Hiburan">Hiburan</option>
-                <option value="Berita">Berita</option>
-                <option value="Lainnya">Lainnya</option>
-              </select>
+              <div>
+                <label for="bookmark-filter-category" class="sr-only">Filter Kategori Bookmark</label>
+                <select id="bookmark-filter-category" aria-label="Filter Kategori Bookmark"
+                  class="px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
+                  <option value="all">Semua Kategori</option>
+                  <option value="Dokumentasi">Dokumentasi</option>
+                  <option value="Belajar">Belajar</option>
+                  <option value="Tools">Tools</option>
+                  <option value="Desain">Desain</option>
+                  <option value="Hiburan">Hiburan</option>
+                  <option value="Berita">Berita</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+              </div>
 
-              <select id="bookmark-sort"
-                class="px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
-                <option value="newest">Terbaru Ditambahkan</option>
-                <option value="title-asc">Judul (A-Z)</option>
-                <option value="title-desc">Judul (Z-A)</option>
-                <option value="category-asc">Kategori (A-Z)</option>
-              </select>
+              <div>
+                <label for="bookmark-sort" class="sr-only">Urutkan Koleksi Bookmark</label>
+                <select id="bookmark-sort" aria-label="Urutkan Koleksi Bookmark"
+                  class="px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 bg-white">
+                  <option value="newest">Terbaru Ditambahkan</option>
+                  <option value="title-asc">Judul (A-Z)</option>
+                  <option value="title-desc">Judul (Z-A)</option>
+                  <option value="category-asc">Kategori (A-Z)</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -412,7 +433,7 @@
           <div id="bookmark-empty"
             class="hidden rounded-2xl border-2 border-dashed border-slate-200 p-8 text-center bg-white">
             <div
-              class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+              class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-500 flex items-center justify-center mx-auto mb-3">
               <i class="ti ti-bookmark-off text-2xl"></i>
             </div>
             <h4 class="font-bold text-slate-800 text-sm mb-1">Belum Ada Bookmark</h4>
@@ -434,12 +455,13 @@
     <!-- ========================================================================= -->
     <section id="panel-quiz" class="hidden max-w-2xl mx-auto space-y-6" role="tabpanel"
       aria-label="Panel Kuis Interaktif">
+      <h2 class="sr-only">Kuis Interaktif Pemrograman Web & JavaScript</h2>
 
       <!-- CARD 1: HALAMAN AWAL (START SCREEN) -->
       <div id="quiz-card-start"
         class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
         <div
-          class="w-16 h-16 rounded-3xl bg-indigo-50 text-indigo-600 flex items-center justify-center mx-auto mb-4 shadow-sm">
+          class="w-16 h-16 rounded-3xl bg-indigo-50 text-indigo-700 flex items-center justify-center mx-auto mb-4 shadow-sm">
           <i class="ti ti-school text-3xl"></i>
         </div>
 
@@ -454,11 +476,11 @@
         <!-- Info Card & High Score -->
         <div class="grid grid-cols-2 gap-3 max-w-sm mx-auto mb-6">
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100">
-            <span class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Jumlah Soal</span>
+            <span class="block text-[11px] font-semibold text-slate-600 uppercase tracking-wider">Jumlah Soal</span>
             <span class="text-base font-bold text-slate-800 mt-0.5 block">8 Pertanyaan</span>
           </div>
           <div class="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200/60">
-            <span class="block text-[11px] font-semibold text-amber-600 uppercase tracking-wider">High Score</span>
+            <span class="block text-[11px] font-semibold text-amber-800 uppercase tracking-wider">High Score</span>
             <span id="quiz-high-score-display" class="text-base font-bold text-amber-800 mt-0.5 block">
               Belum ada
             </span>
@@ -478,7 +500,7 @@
 
         <!-- Header Kuis: Indikator Soal & Timer -->
         <div class="flex items-center justify-between gap-3 mb-4">
-          <span id="quiz-progress-text" class="text-xs font-bold uppercase tracking-wider text-indigo-600 font-mono">
+          <span id="quiz-progress-text" class="text-xs font-bold uppercase tracking-wider text-indigo-700 font-mono">
             Pertanyaan 1 dari 8
           </span>
           <div class="flex items-center gap-2">
@@ -495,10 +517,10 @@
         </div>
 
         <!-- Teks Pertanyaan -->
-        <h4 id="quiz-question-text"
+        <h3 id="quiz-question-text"
           class="font-display font-bold text-slate-900 text-base sm:text-lg leading-relaxed mb-6">
           Pertanyaan akan tampil di sini...
-        </h4>
+        </h3>
 
         <!-- Wadah 4 Opsi Jawaban -->
         <div id="quiz-options-container" class="space-y-3 mb-4">
@@ -524,7 +546,7 @@
       <div id="quiz-card-result"
         class="hidden bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
         <div
-          class="w-16 h-16 rounded-3xl bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-sm">
+          class="w-16 h-16 rounded-3xl bg-emerald-50 text-emerald-700 flex items-center justify-center mx-auto mb-4 shadow-sm">
           <i class="ti ti-award text-3xl"></i>
         </div>
 
@@ -543,11 +565,11 @@
 
         <!-- Skor Besar -->
         <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 max-w-sm mx-auto mb-6">
-          <span class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Skor Akhir</span>
-          <span id="quiz-final-score" class="font-display font-extrabold text-3xl sm:text-4xl text-indigo-600 block">
+          <span class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Skor Akhir</span>
+          <span id="quiz-final-score" class="font-display font-extrabold text-3xl sm:text-4xl text-indigo-700 block">
             0 / 80
           </span>
-          <span id="quiz-final-percent" class="text-xs font-semibold text-slate-500 mt-1 block">
+          <span id="quiz-final-percent" class="text-xs font-semibold text-slate-600 mt-1 block">
             0% Akurasi
           </span>
         </div>
@@ -561,10 +583,10 @@
 
         <!-- Review Jawaban Accordion / List -->
         <div class="text-left mb-6">
-          <h5 class="font-display font-bold text-slate-900 text-sm mb-3 flex items-center gap-2">
-            <i class="ti ti-list-check text-indigo-600"></i>
+          <h4 class="font-display font-bold text-slate-900 text-sm mb-3 flex items-center gap-2">
+            <i class="ti ti-list-check text-indigo-700"></i>
             Review Jawaban & Penjelasan
-          </h5>
+          </h4>
           <div id="quiz-review-list" class="space-y-3 max-h-80 overflow-y-auto pr-1">
             <!-- Review pertanyaan dirender di sini -->
           </div>
@@ -606,13 +628,13 @@
     <div
       class="relative w-full max-w-md bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-7 z-10 animate-in fade-in zoom-in-95 duration-200">
       <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-        <h3 id="modal-expense-edit-title"
+        <h2 id="modal-expense-edit-title"
           class="font-display font-bold text-slate-900 text-base flex items-center gap-2">
           <i class="ti ti-pencil text-indigo-600"></i>
           Ubah Transaksi
-        </h3>
+        </h2>
         <button type="button" data-close-modal="#modal-expense-edit"
-          class="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+          class="p-1.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
           aria-label="Tutup Modal">
           <i class="ti ti-x text-lg"></i>
         </button>
@@ -701,9 +723,9 @@
       <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mx-auto mb-3">
         <i class="ti ti-trash text-2xl"></i>
       </div>
-      <h3 id="modal-expense-delete-title" class="font-display font-bold text-center text-slate-900 text-base mb-1">
+      <h2 id="modal-expense-delete-title" class="font-display font-bold text-center text-slate-900 text-base mb-1">
         Hapus Transaksi?
-      </h3>
+      </h2>
       <p class="text-xs text-slate-500 text-center mb-5 leading-relaxed">
         Apakah Anda yakin ingin menghapus transaksi <strong id="expense-delete-title" class="text-slate-800"></strong>?
         Data yang dihapus tidak dapat dipulihkan.
@@ -732,13 +754,13 @@
     <div
       class="relative w-full max-w-md bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-7 z-10 animate-in fade-in zoom-in-95 duration-200">
       <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-        <h3 id="modal-bookmark-edit-title"
+        <h2 id="modal-bookmark-edit-title"
           class="font-display font-bold text-slate-900 text-base flex items-center gap-2">
           <i class="ti ti-pencil text-indigo-600"></i>
           Ubah Bookmark
-        </h3>
+        </h2>
         <button type="button" data-close-modal="#modal-bookmark-edit"
-          class="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+          class="p-1.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
           aria-label="Tutup Modal">
           <i class="ti ti-x text-lg"></i>
         </button>
@@ -811,9 +833,9 @@
       <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mx-auto mb-3">
         <i class="ti ti-trash text-2xl"></i>
       </div>
-      <h3 id="modal-bookmark-delete-title" class="font-display font-bold text-center text-slate-900 text-base mb-1">
+      <h2 id="modal-bookmark-delete-title" class="font-display font-bold text-center text-slate-900 text-base mb-1">
         Hapus Bookmark?
-      </h3>
+      </h2>
       <p class="text-xs text-slate-500 text-center mb-5 leading-relaxed">
         Apakah Anda yakin ingin menghapus bookmark <strong id="bookmark-delete-title" class="text-slate-800"></strong>?
         Tindakan ini tidak dapat dibatalkan.
@@ -834,7 +856,7 @@
   </div>
 
   <!-- ==================== WADAH NOTIFIKASI TOAST ==================== -->
-  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none" role="region" aria-label="Notifikasi Sistem" aria-live="polite"></div>
 
   <!-- SCRIPT UTAMA VANILLA JAVASCRIPT -->
   <script src="assets/script.js"></script>

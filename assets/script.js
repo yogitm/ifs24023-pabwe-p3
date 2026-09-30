@@ -357,8 +357,8 @@ function updateExpenseSummary() {
   if (summaryTotalExpense) summaryTotalExpense.textContent = formatRupiah(totalExpense);
   if (summaryBalance) {
     summaryBalance.textContent = formatRupiah(balance);
-    summaryBalance.classList.toggle("text-emerald-600", balance >= 0);
-    summaryBalance.classList.toggle("text-rose-600", balance < 0);
+    summaryBalance.classList.toggle("text-emerald-700", balance >= 0);
+    summaryBalance.classList.toggle("text-rose-700", balance < 0);
   }
 }
 
@@ -372,7 +372,7 @@ function getExpenseCategoryMeta(category, type) {
   if (isIncome) {
     return {
       badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
-      iconClass: "ti-arrow-down-left text-emerald-600",
+      iconClass: "ti-arrow-down-left text-emerald-700",
       bgIcon: "bg-emerald-100",
     };
   }
@@ -417,7 +417,7 @@ function getExpenseCategoryMeta(category, type) {
 
   return metaMap[category] || {
     badgeClass: "bg-rose-50 text-rose-700 border-rose-200",
-    iconClass: "ti-arrow-up-right text-rose-600",
+    iconClass: "ti-arrow-up-right text-rose-700",
     bgIcon: "bg-rose-100",
   };
 }
@@ -478,7 +478,7 @@ function renderExpenses() {
     emptyFilterLi.className =
       "rounded-2xl border border-dashed border-slate-300 bg-slate-50/50 p-8 text-center text-slate-500 text-sm";
     emptyFilterLi.innerHTML = `
-      <i class="ti ti-search text-3xl text-slate-400 block mb-2"></i>
+      <i class="ti ti-search text-3xl text-slate-500 block mb-2"></i>
       Tidak ada transaksi yang sesuai dengan filter atau kata kunci pencarian.
     `;
     expenseList.appendChild(emptyFilterLi);
@@ -505,7 +505,7 @@ function renderExpenses() {
             <span class="inline-flex items-center gap-1 text-xs px-2.5 py-0.5 rounded-full font-medium border ${meta.badgeClass}">
               ${item.category}
             </span>
-            <span class="text-xs text-slate-400 flex items-center gap-1">
+            <span class="text-xs text-slate-600 flex items-center gap-1">
               <i class="ti ti-calendar text-xs"></i>
               ${formatDate(item.date)}
             </span>
@@ -515,10 +515,10 @@ function renderExpenses() {
 
       <div class="flex items-center justify-between sm:justify-end gap-4 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100">
         <div class="text-left sm:text-right">
-          <span class="block font-bold text-base sm:text-lg ${isIncome ? "text-emerald-600" : "text-slate-900"}">
+          <span class="block font-bold text-base sm:text-lg ${isIncome ? "text-emerald-700" : "text-slate-900"}">
             ${isIncome ? "+" : "-"}${formatRupiah(item.amount)}
           </span>
-          <span class="text-[11px] font-medium uppercase tracking-wider text-slate-400 block">
+          <span class="text-[11px] font-medium uppercase tracking-wider text-slate-600 block">
             ${isIncome ? "Pemasukan" : "Pengeluaran"}
           </span>
         </div>
@@ -526,18 +526,18 @@ function renderExpenses() {
         <div class="flex items-center gap-1.5">
           <button
             type="button"
-            class="btn-edit-expense p-2 rounded-xl text-slate-500 hover:text-indigo-600 hover:bg-indigo-50 border border-slate-200 hover:border-indigo-200 transition-colors"
+            class="btn-edit-expense p-2 rounded-xl text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 border border-slate-200 hover:border-indigo-200 transition-colors"
             title="Ubah Transaksi"
-            aria-label="Ubah Transaksi"
+            aria-label="Ubah Transaksi ${escapeHtml(item.title)}"
             data-id="${item.id}"
           >
             <i class="ti ti-pencil text-base"></i>
           </button>
           <button
             type="button"
-            class="btn-delete-expense p-2 rounded-xl text-slate-500 hover:text-rose-600 hover:bg-rose-50 border border-slate-200 hover:border-rose-200 transition-colors"
+            class="btn-delete-expense p-2 rounded-xl text-slate-600 hover:text-rose-600 hover:bg-rose-50 border border-slate-200 hover:border-rose-200 transition-colors"
             title="Hapus Transaksi"
-            aria-label="Hapus Transaksi"
+            aria-label="Hapus Transaksi ${escapeHtml(item.title)}"
             data-id="${item.id}"
           >
             <i class="ti ti-trash text-base"></i>
@@ -886,7 +886,7 @@ function renderBookmarks() {
     li.className =
       "col-span-full rounded-2xl border border-dashed border-slate-300 bg-slate-50/50 p-8 text-center text-slate-500 text-sm";
     li.innerHTML = `
-      <i class="ti ti-search text-3xl text-slate-400 block mb-2"></i>
+      <i class="ti ti-search text-3xl text-slate-500 block mb-2"></i>
       Tidak ada bookmark yang cocok dengan kriteria pencarian.
     `;
     bookmarkList.appendChild(li);
@@ -914,7 +914,7 @@ function renderBookmarks() {
             <i class="ti ti-tag text-[11px]"></i>
             ${bm.category}
           </span>
-          <span class="text-xs text-slate-400 flex items-center gap-1 font-mono">
+          <span class="text-xs text-slate-600 flex items-center gap-1 font-mono">
             <i class="ti ti-world text-xs"></i>
             ${domain}
           </span>
@@ -928,7 +928,7 @@ function renderBookmarks() {
         </h4>
 
         <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-4">
-          ${bm.note ? escapeHtml(bm.note) : '<span class="italic text-slate-400">Tidak ada catatan tambahan.</span>'}
+          ${bm.note ? escapeHtml(bm.note) : '<span class="italic text-slate-600">Tidak ada catatan tambahan.</span>'}
         </p>
       </div>
 
@@ -937,7 +937,7 @@ function renderBookmarks() {
           href="${escapeHtml(bm.url)}"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
+          class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 hover:text-indigo-900 transition-colors"
         >
           <i class="ti ti-arrow-up-right"></i>
           Kunjungi Link
@@ -946,27 +946,27 @@ function renderBookmarks() {
         <div class="flex items-center gap-1">
           <button
             type="button"
-            class="btn-copy-bookmark p-1.5 rounded-lg text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
+            class="btn-copy-bookmark p-1.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
             title="Salin URL"
-            aria-label="Salin URL"
+            aria-label="Salin URL ${escapeHtml(bm.title)}"
             data-url="${escapeHtml(bm.url)}"
           >
             <i class="ti ti-copy text-base"></i>
           </button>
           <button
             type="button"
-            class="btn-edit-bookmark p-1.5 rounded-lg text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
+            class="btn-edit-bookmark p-1.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
             title="Ubah Bookmark"
-            aria-label="Ubah Bookmark"
+            aria-label="Ubah Bookmark ${escapeHtml(bm.title)}"
             data-id="${bm.id}"
           >
             <i class="ti ti-pencil text-base"></i>
           </button>
           <button
             type="button"
-            class="btn-delete-bookmark p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors"
+            class="btn-delete-bookmark p-1.5 rounded-lg text-slate-600 hover:text-rose-600 hover:bg-rose-50 transition-colors"
             title="Hapus Bookmark"
-            aria-label="Hapus Bookmark"
+            aria-label="Hapus Bookmark ${escapeHtml(bm.title)}"
             data-id="${bm.id}"
           >
             <i class="ti ti-trash text-base"></i>
@@ -1390,6 +1390,7 @@ function renderCurrentQuestion() {
       btn.className =
         "quiz-opt-btn w-full flex items-center gap-3.5 p-4 rounded-2xl border-2 border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/40 text-left transition-all duration-150 group";
       btn.dataset.index = idx;
+      btn.setAttribute("aria-label", `Pilihan ${letters[idx]}: ${optText}`);
 
       btn.innerHTML = `
         <span class="w-8 h-8 rounded-xl bg-slate-100 text-slate-700 group-hover:bg-indigo-600 group-hover:text-white font-bold text-sm flex items-center justify-center shrink-0 transition-colors">
@@ -1437,14 +1438,14 @@ function handleOptionSelect(selectedIndex) {
       btn.classList.remove("border-slate-200", "bg-white", "hover:border-indigo-400", "hover:bg-indigo-50/40");
       btn.classList.add("border-emerald-500", "bg-emerald-50/80", "text-emerald-950");
       if (icon) {
-        icon.className = "opt-status-icon ti ti-circle-check-filled text-emerald-600 text-xl opacity-100";
+        icon.className = "opt-status-icon ti ti-circle-check-filled text-emerald-700 text-xl opacity-100";
       }
     } else if (idx === selectedIndex && !isCorrect) {
       // Opsi yang dipilih salah jadi merah
       btn.classList.remove("border-slate-200", "bg-white", "hover:border-indigo-400", "hover:bg-indigo-50/40");
       btn.classList.add("border-rose-500", "bg-rose-50/80", "text-rose-950");
       if (icon) {
-        icon.className = "opt-status-icon ti ti-circle-x-filled text-rose-600 text-xl opacity-100";
+        icon.className = "opt-status-icon ti ti-circle-x-filled text-rose-700 text-xl opacity-100";
       }
     } else {
       btn.classList.add("opacity-50");
@@ -1551,7 +1552,7 @@ function showQuizResults() {
 
       reviewItem.innerHTML = `
         <div class="flex items-start gap-2.5 mb-2">
-          <i class="ti ${isCorrect ? "ti-circle-check text-emerald-600" : "ti-circle-x text-rose-600"} text-lg shrink-0 mt-0.5"></i>
+          <i class="ti ${isCorrect ? "ti-circle-check text-emerald-700" : "ti-circle-x text-rose-700"} text-lg shrink-0 mt-0.5"></i>
           <div>
             <h5 class="font-semibold text-slate-900 text-sm leading-snug">
               ${idx + 1}. ${escapeHtml(q.question)}
@@ -1559,11 +1560,11 @@ function showQuizResults() {
           </div>
         </div>
         <div class="ml-7 text-xs space-y-1">
-          <p class="${isCorrect ? "text-emerald-700" : "text-rose-700"}">
+          <p class="${isCorrect ? "text-emerald-800" : "text-rose-800"}">
             <span class="font-semibold">Jawaban Anda:</span> ${escapeHtml(userText)}
           </p>
-          ${!isCorrect ? `<p class="text-emerald-800"><span class="font-semibold">Kunci Jawaban:</span> ${escapeHtml(correctText)}</p>` : ""}
-          <p class="text-slate-500 pt-1 text-[11px] border-t border-slate-200/60 mt-1">
+          ${!isCorrect ? `<p class="text-emerald-900"><span class="font-semibold">Kunci Jawaban:</span> ${escapeHtml(correctText)}</p>` : ""}
+          <p class="text-slate-600 pt-1 text-[11px] border-t border-slate-200/60 mt-1">
             <span class="font-semibold">Penjelasan:</span> ${escapeHtml(q.explanation)}
           </p>
         </div>
