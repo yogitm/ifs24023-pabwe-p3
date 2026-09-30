@@ -5,52 +5,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PABWE P3 — Web Apps & Interactive Hub (ifs24023)</title>
+  <meta name="description" content="Aplikasi Web Interaktif Mahasiswa IFS24023: Expense Tracker, Bookmark Manager, dan Quiz Interaktif berbasis Vanilla JS dan HTML5 semantik." />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="canonical" href="https://ifs24023-p3.yogitrim.my.id/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
 
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <!-- Preconnect External CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+  <!-- Compiled Static CSS (Zero Runtime Overhead) -->
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- Asynchronous Non-blocking Web Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-    rel="stylesheet" />
-
-  <!-- Tabler Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-            },
-          },
-        },
-      },
-    };
-  </script>
-
-  <style>
-    /* Halus scrollbar dan transisi */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    ::selection {
-      background-color: #c7d2fe;
-      color: #312e81;
-    }
-  </style>
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  </noscript>
 </head>
 
 <body class="min-h-full flex flex-col text-slate-800 antialiased font-sans bg-slate-50">
@@ -859,7 +845,7 @@
   <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none" role="region" aria-label="Notifikasi Sistem" aria-live="polite"></div>
 
   <!-- SCRIPT UTAMA VANILLA JAVASCRIPT -->
-  <script src="assets/script.js?v=3"></script>
+  <script src="assets/script.js" defer></script>
 </body>
 
 </html>
